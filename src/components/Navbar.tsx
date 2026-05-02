@@ -20,7 +20,7 @@ export default function Navbar() {
   const [mobProd, setMobProd]   = useState(false)
   const pathname                = usePathname()
   const router                  = useRouter()
-  const dropRef                 = useRef<HTMLDivElement>(null)
+  const dropRef                 = useRef<HTMLLIElement>(null)
   const closeTimer              = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   const openDrop  = () => { if (closeTimer.current) clearTimeout(closeTimer.current); setDropOpen(true) }
