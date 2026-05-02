@@ -1,7 +1,7 @@
 export const stats = [
   { value: '500+', label: 'Kg plastik didaur ulang' },
   { value: '2.000+', label: 'Produk terjual' },
-  { value: '50+', label: 'Brand partner' },
+  { value: '20+', label: 'Brand partner' },
 ]
 
 export const processSteps = [
