@@ -163,15 +163,15 @@ export default function ContactPage() {
             </p>
             <div className="rounded-2xl overflow-hidden" style={{ border: '1px solid rgba(0,0,0,0.08)', height: 320 }}>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.747638600433!2d109.6500564!3d-6.9207431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7026b1b0309db1%3A0x177d3a252394f00c!2sNotic%20workshop!5e0!3m2!1sid!2sid!4v1777721950861!5m2!1sid!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Lokasi Notic - Pekalongan"
-              />
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.747638600433!2d109.6500564!3d-6.9207431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7026b1b0309db1%3A0x177d3a252394f00c!2sNotic%20workshop!5e0!3m2!1sid!2sid!4v1777721950861!5m2!1sid!2sid"
+  width="100%"
+  height="100%"
+  style={{ border: 0 }}
+  allowFullScreen
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+  title="Lokasi Notic Workshop - Pekalongan"
+/>
             </div>
           </div>
 
