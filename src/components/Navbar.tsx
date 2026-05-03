@@ -202,26 +202,35 @@ export default function Navbar() {
               </Link>
             ))}
 
-            {/* Mobile product */}
+            {/* Mobile product — accordion */}
             <div style={{ borderBottom: '1px solid rgba(0,0,0,0.06)' }}>
               <button
                 onClick={() => setMobProd(!mobProd)}
                 className="w-full flex items-center justify-between py-3.5 text-sm bg-transparent border-none cursor-pointer"
                 style={{ color: pathname.startsWith('/product') ? '#1D978E' : '#1A1A18', fontFamily: 'Montserrat,sans-serif', fontWeight: pathname.startsWith('/product') ? 600 : 400 }}
               >
-                Product
+                <span>Product</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                  style={{ transform: mobProd ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s', color: '#4A4A45' }}>
+                  style={{ transform: mobProd ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s', flexShrink: 0, color: '#4A4A45' }}>
                   <path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </button>
               {mobProd && (
-                <div className="pl-4 flex flex-col pb-3">
+                <div className="flex flex-col pb-3" style={{ background: '#F7F4EF', borderRadius: 12, margin: '0 -4px 8px', padding: '4px 0' }}>
+                  {/* Lihat semua produk */}
+                  <Link href="/product" onClick={() => setOpen(false)}
+                    className="flex items-center gap-2 px-5 py-3 text-sm no-underline font-semibold"
+                    style={{ color: '#1D978E', fontFamily: 'Poppins,sans-serif', borderBottom: '1px solid rgba(0,0,0,0.06)' }}>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+                    Semua Produk
+                  </Link>
+                  {/* Per kategori */}
                   {productDropdown.map((item) => (
                     <button key={item.id}
                       onClick={() => { goToCategory(item.id); setMobProd(false) }}
-                      className="py-2.5 text-sm text-left bg-transparent border-none cursor-pointer"
+                      className="flex items-center gap-2 px-5 py-3 text-sm text-left bg-transparent border-none cursor-pointer"
                       style={{ color: '#4A4A45', fontFamily: 'Montserrat,sans-serif' }}>
+                      <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#1D978E', display: 'inline-block', flexShrink: 0 }} />
                       {item.label}
                     </button>
                   ))}
