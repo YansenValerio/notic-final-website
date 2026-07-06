@@ -6,17 +6,18 @@ import Process from '@/components/Process'
 import About from '@/components/About'
 import CTABanner from '@/components/CTABanner'
 import Footer from '@/components/Footer'
+import ScrollReveal from '@/components/ScrollReveal'
 
 export default function Home() {
   return (
     <main>
       <Navbar />
       <Hero />
-      <Stats />
-      <Products />
-      <Process />
-      <About />
-      <CTABanner />
+      <ScrollReveal><Stats /></ScrollReveal>
+      <ScrollReveal><Products /></ScrollReveal>
+      <ScrollReveal><Process /></ScrollReveal>
+      <ScrollReveal><About /></ScrollReveal>
+      <ScrollReveal><CTABanner /></ScrollReveal>
       <Footer />
     </main>
   )

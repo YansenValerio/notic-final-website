@@ -17,11 +17,11 @@ export default function Products() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {products.map((product, i) => (
+          {products.map((product) => (
             <div
               key={product.id}
-              className="group border rounded-3xl overflow-hidden transition-all duration-300 hover:-translate-y-2"
-              style={{border:'1px solid rgba(0,0,0,0.08)', animationDelay:`${i*0.1}s`}}
+              className="group border rounded-3xl overflow-hidden transition-all duration-300 hover:-translate-y-2 shadow-[0_2px_16px_rgba(0,0,0,0.05)] hover:shadow-[0_18px_44px_rgba(0,0,0,0.11)]"
+              style={{border:'1px solid rgba(0,0,0,0.08)', background:'#fff'}}
             >
               {/* Image */}
               <div className="relative overflow-hidden" style={{aspectRatio:'4/3'}}>
@@ -47,7 +47,7 @@ export default function Products() {
                 <h3 className="mb-2 font-semibold" style={{fontFamily:'Poppins,sans-serif', fontSize:16, color:'#1A1A18'}}>
                   {product.name}
                 </h3>
-                <p className="mb-4 leading-relaxed" style={{fontFamily:'Montserrat,sans-serif', fontSize:13, color:'#8A8A82'}}>
+                <p className="mb-4 leading-relaxed" style={{fontFamily:'Montserrat,sans-serif', fontSize:13, color:'#6B6B62'}}>
                   {product.description}
                 </p>
                 <a
